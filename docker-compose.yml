@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: aula_modelagem_dados
+    image: postgres:alpine
+    
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
